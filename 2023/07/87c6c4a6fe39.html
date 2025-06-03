@@ -1,0 +1,292 @@
+<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>html指南</title><!-- wechatShare --><div style="display:none;"><img src="https://raw.githubusercontent.com/ZlxmChen/ImgRepo/main/iconShare.png" alt=""></div><meta property="og:image" content="https://raw.githubusercontent.com/ZlxmChen/ImgRepo/main/iconShare.png"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="description" content="The sleepwalker dancing on ice"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="
+写在前面随着前端学习的深入，逐渐发现自己的前端基础还不是特别的扎实，记录一下 html 的相关知识，免得每次都得上网查找。总体而言，这算不上新手指南，更好的是作为 html 使用的参考资料。
+html 框架知识基本框架&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;zh-CN&amp;quot;&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot; /&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;my-css-file.css&amp;quot; /&amp;gt;
+    &amp;lt;script src=&amp;quot;my-js-file.js&amp;quot; defer&amp;.."><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="ZLxm's Blog" type="application/atom+xml">
+</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">ZlxmChen's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">html指南</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3><h3 class="is-inline-block"><a target="_blank" rel="noopener" href="https://photo.zlxmchen.top">Photos</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3><h3 class="is-inline-block"><a target="_blank" rel="noopener" href="https://photo.zlxmchen.top">Photos</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#html-%E6%A1%86%E6%9E%B6%E7%9F%A5%E8%AF%86"><span class="toc-text">html 框架知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6"><span class="toc-text">基本框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#head"><span class="toc-text">head</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html-%E5%B8%83%E5%B1%80%E5%85%83%E7%B4%A0"><span class="toc-text">html 布局元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E5%92%8C%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0-block-and-inline-block"><span class="toc-text">块级元素和内联元素 block and inline block</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#span"><span class="toc-text">span</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#div"><span class="toc-text">div</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86"><span class="toc-text">文本处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8-ul-x2F-ol"><span class="toc-text">列表 ul&#x2F;ol</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E7%82%B9%E5%BC%BA%E8%B0%83"><span class="toc-text">重点强调</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5-a"><span class="toc-text">链接 a</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%AC%A6%EF%BC%88URL%EF%BC%89%E4%B8%8E%E8%B7%AF%E5%BE%84%EF%BC%88path%EF%BC%89"><span class="toc-text">统一资源定位符（URL）与路径（path）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E7%89%87-img"><span class="toc-text">图片 img</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9F%B3%E8%A7%86%E9%A2%91-video-audio"><span class="toc-text">音视频 video, audio</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Iframe"><span class="toc-text">Iframe</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC-td-x2F-tr"><span class="toc-text">表格 td&#x2F;tr</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/frontEnd"><i class="tag post-item-tag">frontEnd</i></a><a href="/tags/updating"><i class="tag post-item-tag">updating</i></a><a href="/tags/html"><i class="tag post-item-tag">html</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">html指南</h1><time class="has-text-grey" datetime="2023-07-03T10:37:58.000Z">2023-07-03</time><article class="mt-2 post-content"><p><img src="/images/cover_think_2.png" alt="cover"></p>
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>随着前端学习的深入，逐渐发现自己的前端基础还不是特别的扎实，记录一下 html 的相关知识，免得每次都得上网查找。总体而言，这算不上新手指南，更好的是作为 html 使用的参考资料。</p>
+<h1 id="html-框架知识"><a href="#html-框架知识" class="headerlink" title="html 框架知识"></a>html 框架知识</h1><h2 id="基本框架"><a href="#基本框架" class="headerlink" title="基本框架"></a>基本框架</h2><pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;my-css-file.css&quot; /&gt;
+    &lt;script src=&quot;my-js-file.js&quot; defer&gt;&lt;/script&gt;
+    &lt;title&gt;标题&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;页面&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="head"><a href="#head" class="headerlink" title="head"></a>head</h3><p>页面在浏览器加载后它的内容不会在浏览器中显示，它的作用是保存页面的一些<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Glossary/Metadata">元数据</a>。</p>
+<pre><code class="html">&lt;title&gt;用于显示网页的标题, 与正文中的标题区分&lt;/title&gt;
+</code></pre>
+<p>指定文档的字符编码</p>
+<pre><code class="html">&lt;meta charset=&quot;utf-8&quot; /&gt;
+</code></pre>
+<p>提供作者与简述, 可显示在搜索引擎结果中</p>
+<pre><code class="html">&lt;meta name=&quot;author&quot; content=&quot;Chris Mills&quot; /&gt;
+&lt;meta
+  name=&quot;description&quot;
+  content=&quot;The MDN Web Docs Learning Area aims to provide
+complete beginners to the Web with all they need to know to get
+started with developing web sites and applications.&quot; /&gt;
+</code></pre>
+<p>图标, 可以直接在网页根目录下放 favicon.ico 文件, 也可以在 head 引入(可以使用其他类型图片)</p>
+<pre><code class="html">&lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;
+
+&lt;link
+  rel=&quot;icon&quot;
+  href=&quot;https://developer.mozilla.org/static/img/favicon32.png&quot; /&gt;
+</code></pre>
+<p>使用 css 与 js:</p>
+<pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;my-css-file.css&quot; /&gt;
+&lt;script src=&quot;my-js-file.js&quot; defer&gt;&lt;/script&gt;
+</code></pre>
+<h2 id="html-布局元素"><a href="#html-布局元素" class="headerlink" title="html 布局元素"></a>html 布局元素</h2><pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;二次元俱乐部&lt;/title&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;style.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;header&gt; &lt;!-- 本站所有网页的统一主标题 --&gt;
+      &lt;h1&gt;聆听电子天籁之音&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;nav&gt; &lt;!-- 本站统一的导航栏 --&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;主页&lt;/a&gt;&lt;/li&gt;
+        &lt;!-- 共 n 个导航栏项目，省略…… --&gt;
+      &lt;/ul&gt;
+
+      &lt;form&gt; &lt;!-- 搜索栏是站点内导航的一个非线性的方式。 --&gt;
+        &lt;input type=&quot;search&quot; name=&quot;q&quot; placeholder=&quot;要搜索的内容&quot;&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;搜索&quot;&gt;
+      &lt;/form&gt;
+    &lt;/nav&gt;
+
+    &lt;main&gt; &lt;!-- 网页主体内容 --&gt;
+      &lt;article&gt;
+        &lt;!-- 此处包含一个 article（一篇文章），内容略…… --&gt;
+      &lt;/article&gt;
+
+      &lt;aside&gt; &lt;!-- 侧边栏在主内容右侧 --&gt;
+        &lt;h2&gt;相关链接&lt;/h2&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;这是一个超链接&lt;/a&gt;&lt;/li&gt;
+          &lt;!-- 侧边栏有 n 个超链接，略略略…… --&gt;
+        &lt;/ul&gt;
+      &lt;/aside&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt; &lt;!-- 本站所有网页的统一页脚 --&gt;
+      &lt;p&gt;© 2050 某某保留所有权利&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/main"><code>&lt;main&gt;</code></a>  存放每个页面独有的内容。每个页面上只能用一次  <code>&lt;main&gt;</code>，且直接位于  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a>  中。最好不要把它嵌套进其他元素。</li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article"><code>&lt;article&gt;</code></a>  包围的内容即一篇文章，与页面其他部分无关（比如一篇博文）。</li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/section"><code>&lt;section&gt;</code></a>  与  <code>&lt;article&gt;</code>  类似，但  <code>&lt;section&gt;</code>  更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是：以  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy">标题</a>  作为开头；也可以把一篇  <code>&lt;article&gt;</code>  分成若干部分并分别置于不同的  <code>&lt;section&gt;</code>  中，也可以把一个区段  <code>&lt;section&gt;</code>  分成若干部分并分别置于不同的  <code>&lt;article&gt;</code>  中，取决于上下文。</li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/aside"><code>&lt;aside&gt;</code></a>  包含一些间接信息（术语条目、作者简介、相关链接，等等）。</li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/header"><code>&lt;header&gt;</code></a>  是简介形式的内容。如果它是  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a>  的子元素，那么就是网站的全局页眉。如果它是  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article"><code>&lt;article&gt;</code></a>  或<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/section"><code>&lt;section&gt;</code></a>  的子元素，那么它是这些部分特有的页眉（此  <code>&lt;header&gt;</code>  非彼  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#%e5%a2%9e%e5%8a%a0%e4%b8%80%e4%b8%aa%e6%a0%87%e9%a2%98">标题</a>）。</li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/nav"><code>&lt;nav&gt;</code></a>  包含页面主导航功能。其中不应包含二级链接等内容。</li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/footer"><code>&lt;footer&gt;</code></a>  包含了页面的页脚部分。</li>
+</ul>
+<h2 id="块级元素和内联元素-block-and-inline-block"><a href="#块级元素和内联元素-block-and-inline-block" class="headerlink" title="块级元素和内联元素 block and inline block"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E5%92%8C%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0">块级元素和内联元素 block and inline block</a></h2><p>块级元素在页面中以块的形式展现。一个块级元素出现在它前面的内容之后的新行上。任何跟在块级元素后面的内容也会出现在新的行上。</p>
+<p>常用的块级元素有:</p>
+<pre><code class="html">&lt;div&gt;        定义文档中的分区或节
+&lt;p&gt;        定义段落
+&lt;h1&gt;&lt;h2&gt;&lt;h3&gt;&lt;h4&gt;&lt;h5&gt;&lt;h6&gt;        标题元素
+&lt;dl&gt;        定义列表
+&lt;dt&gt;        定义列表中的项目
+&lt;form&gt;        创建表单元素
+&lt;hr&gt;        水平线
+&lt;li&gt;        定义列表项目
+&lt;ol&gt;        有序列表
+&lt;ul&gt;        无序列表
+&lt;table&gt;        定义表格
+&lt;td&gt;        表格中的标准单元格
+&lt;tr&gt;        表格中的行
+&lt;tfoot&gt;        表格中的页脚
+&lt;th&gt;        定义表头单元格
+&lt;thead&gt;        定义表格的表头
+</code></pre>
+<blockquote>
+<p>注意此处的逻辑, 是块级元素出现在新行, 而非后一个元素出现在新行, 这个和\n 还是不一样的</p>
+</blockquote>
+<p>内联元素通常出现在块级元素中并环绕文档内容的一小部分，而不是一整个段落或者一组内容。内联元素不会导致文本换行。</p>
+<p>常用的内联元素有:</p>
+<pre><code class="html">&lt;a&gt;        可定义锚以及超链接
+&lt;span&gt;        组合文档中的行内元素
+&lt;textarea&gt;        多行文本输入控件
+&lt;img&gt;        向网页中嵌入一张图像
+&lt;input&gt;        输入框
+&lt;label&gt;        为input进行标记/标注
+&lt;strong&gt;        语气更强的强调内容
+&lt;abbr&gt;        表示一个缩写形式
+&lt;acronym&gt;        表示只取title中首字母的缩写形式
+&lt;b&gt;        字体加粗
+&lt;big&gt; &lt;small&gt;       大号字体加粗
+&lt;br&gt;        换行
+&lt;code&gt;        定义计算机代码文本
+&lt;em&gt;        定义为强调的内容
+&lt;i&gt;        斜体文本效果
+&lt;q&gt;        定义短的引用
+&lt;s&gt;    表示不准确不相关，却不应当给予删除的内容
+&lt;sub&gt;        定义下标文本
+&lt;sup&gt;        定义上标文本
+</code></pre>
+<blockquote>
+<p>默认而言元素的类型与 CSS 显示类型相关, 但改变 CSS 显示类型并不会改变元素的分类<br>但是直接理解为盒模型中的默认显示类型更加容易理解,</p>
+</blockquote>
+<p>其中介绍两种最常用的无语义元素</p>
+<h2 id="span"><a href="#span" class="headerlink" title="span"></a>span</h2><p>一种无语义的块内元素, 可以很方便的应用各种 css 与 Js 效果</p>
+<pre><code class="html">&lt;span style=&quot;font-size: 32px; margin: 21px 0; display: block;&quot;&gt;一个伪装的标题&lt;/span&gt;
+</code></pre>
+<h2 id="div"><a href="#div" class="headerlink" title="div"></a>div</h2><p>一种无语义的块元素, 可以很方便的作为页面布局的工具</p>
+<blockquote>
+<p>但是需要注意, 特别是 div, 常常被明显的滥用, 这不利于代码的编写与障碍人群对内容的理解, 尽可能采用有语义测元素</p>
+</blockquote>
+<h1 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h1><h2 id="列表-ul-x2F-ol"><a href="#列表-ul-x2F-ol" class="headerlink" title="列表 ul&#x2F;ol"></a>列表 ul&#x2F;ol</h2><p>ul 代表无序清单, ol 代表有序清单, 其中的项目由 li 包裹, li 和 ul&#x2F;ol 都是块级元素, 你可以在块内进一步增加布局, 理论上你也可以在 li 中进一步嵌套列表, 比如下面这个例子:</p>
+<pre><code class="html">&lt;ul&gt;
+    &lt;li&gt;
+        &lt;h1&gt;标题&lt;/h1&gt;
+        &lt;p&gt;内容&lt;/p&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<h2 id="重点强调"><a href="#重点强调" class="headerlink" title="重点强调"></a>重点强调</h2><p>通常, 诸如粗体斜体等都可以通过<code>&lt;span&gt;</code>与 CSS 样式实现, 但是 html 提供了一些文本意义上的内容帮助快速的完成重点强调工作:</p>
+<ul>
+<li><code>&lt;em&gt;</code> 一种斜体的强调</li>
+<li><code>&lt;strong&gt;</code> 一种加粗的强调</li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/i"><code>&lt;i&gt;</code></a>  被用来传达传统上用斜体表达的意义：外国文字，分类名称，技术术语，一种思想……</li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/b"><code>&lt;b&gt;</code></a>  被用来传达传统上用粗体表达的意义：关键字，产品名称，引导句……</li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/u"><code>&lt;u&gt;</code></a>  被用来传达传统上用下划线表达的意义：专有名词，拼写错误……</li>
+</ul>
+<h1 id="链接-a"><a href="#链接-a" class="headerlink" title="链接 a"></a>链接 a</h1><p>最基础的链接格式只需要包含 href, 你也可以声明 title:</p>
+<pre><code class="html">&lt;a href=&quot;https://www.mozilla.org/zh-CN/&quot;
+   title=&quot;了解 Mozilla 使命以及如何参与贡献的最佳站点。&quot;&gt;Mozilla 主页&lt;/a&gt;
+</code></pre>
+<p>当你想要让一个元素转化为超链接时, 需要让<code>&lt;a&gt;</code>包裹其他元素, 特别是在使用<code>&lt;img&gt;</code>的时候:</p>
+<pre><code class="html">&lt;a href=&quot;https://developer.mozilla.org/zh-CN/&quot;&gt;
+  &lt;img src=&quot;mdn_logo.svg&quot; alt=&quot;MDN Web 文档主页&quot; /&gt;
+&lt;/a&gt;
+</code></pre>
+<p>当指向的是需要下载的资源时, 可以通过 download 属性来指定下载的名称</p>
+<pre><code class="html">&lt;a href=&quot;https://download.mozilla.org/?product=firefox-latest-ssl&amp;os=win64&amp;lang=zh-CN&quot;
+   download=&quot;firefox-latest-64bit-installer.exe&quot;&gt;
+  下载最新的 Firefox 中文版 - Windows（64 位）
+&lt;/a&gt;
+</code></pre>
+<p>可以通过 target 属性选择链接打开的方式</p>
+<ul>
+<li><code>_self</code>：当前页面加载。（默认）</li>
+<li><code>_blank</code>：通常在新标签页打开，但用户可以通过配置选择在新窗口打开</li>
+</ul>
+<pre><code class="html">&lt;a href=&quot;https://www.example.com/video-stream/&quot; target=&quot;_blank&quot;&gt;
+    观看视频（将在新标签页中播放）
+  &lt;/a&gt;
+</code></pre>
+<h2 id="统一资源定位符（URL）与路径（path）"><a href="#统一资源定位符（URL）与路径（path）" class="headerlink" title="统一资源定位符（URL）与路径（path）"></a>统一资源定位符（URL）与路径（path）</h2><ul>
+<li>指向当前目录</li>
+</ul>
+<pre><code class="html">&lt;p&gt;
+  要联系某位工作人员，请访问我们的&lt;a href=&quot;contacts.html&quot;&gt;联系人页面&lt;/a&gt;。
+&lt;/p&gt;
+</code></pre>
+<blockquote>
+<p>在没有指定特定的 URL 的情况下，大多数 web 服务器会默认访问加载  <code>index.html</code>  这类页面</p>
+</blockquote>
+<ul>
+<li>指向子目录</li>
+</ul>
+<pre><code class="html">&lt;p&gt;请访问我的&lt;a href=&quot;projects/index.html&quot;&gt;项目主页&lt;/a&gt;。&lt;/p&gt;
+</code></pre>
+<ul>
+<li>指向上级目录</li>
+</ul>
+<pre><code class="html">&lt;p&gt;点击打开&lt;a href=&quot;../pdfs/project-brief.pdf&quot;&gt;项目简介&lt;/a&gt;。&lt;/p&gt;
+</code></pre>
+<ul>
+<li>文档片段(文档内位置)<br>要指向文档内位置, 需要先给目标元素分配 id, 后通过#id 访问</li>
+</ul>
+<pre><code class="html">&lt;p&gt;
+  要提供意见和建议，请将信件邮寄至
+  &lt;a href=&quot;contacts.html#Mailing_address&quot;&gt;我们的地址&lt;/a&gt;。
+&lt;/p&gt;
+</code></pre>
+<p>以上给出的都是相对 URL, 如果需要使用绝对路径则需要补充域名<code>https://www.example.com/projects/index.html</code></p>
+<h1 id="图片-img"><a href="#图片-img" class="headerlink" title="图片 img"></a>图片 img</h1><pre><code class="html">&lt;img src=&quot;images/dinosaur.jpg&quot;
+     alt=&quot;The head and torso of a dinosaur skeleton&quot;&gt;
+</code></pre>
+<p>如果想要为图片添加说明文字, 使用语义容器<code>&lt;figure&gt;</code>和<code>&lt;figcaption&gt;</code>是更好的选择</p>
+<pre><code class="html">&lt;figure&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/mdn/dinosaur_small.jpg&quot;
+      alt=&quot;一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。&quot;
+      width=&quot;400&quot;
+      height=&quot;341&quot;&gt;
+  &lt;figcaption&gt;曼彻斯特大学博物馆展出的一只霸王龙的化石&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<h1 id="音视频-video-audio"><a href="#音视频-video-audio" class="headerlink" title="音视频 video, audio"></a>音视频 video, audio</h1><p>一个典型的 video 是这样的:</p>
+<pre><code class="html">&lt;video src=&quot;rabbit320.webm&quot; controls&gt;
+  &lt;p&gt;你的浏览器不支持 HTML5 视频。可点击&lt;a href=&quot;rabbit320.mp4&quot;&gt;此链接&lt;/a&gt;观看&lt;/p&gt;
+&lt;/video&gt;
+</code></pre>
+<ul>
+<li>controls 使得使用者可以控制视频的播放</li>
+<li>video 标签内的内容称为后备内容, 在 video 标签不兼容的时候显示</li>
+</ul>
+<p>video 还有一些实用的属性</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video#width"><code>width</code></a>  和  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video#height"><code>height</code></a><br>你可以用属性控制视频的尺寸，也可以用  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Glossary/CSS">CSS</a>  来控制视频尺寸。无论使用哪种方式，视频都会保持它原始的长宽比 — 也叫做<strong>纵横比</strong>。如果你设置的尺寸没有保持视频原始长宽比，那么视频边框将会拉伸，而未被视频内容填充的部分，将会显示默认的背景颜色。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video#autoplay"><code>autoplay</code></a><br>这个属性会使音频和视频内容立即播放，即使页面的其他部分还没有加载完全。建议不要应用这个属性在你的网站上，因为用户们会比较反感自动播放的媒体文件。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video#loop"><code>loop</code></a><br>这个属性可以让音频或者视频文件循环播放。同样不建议使用，除非有必要。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video#muted"><code>muted</code></a><br>这个属性会导致媒体播放时，默认关闭声音。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video#poster"><code>poster</code></a><br>这个属性指向了一个图像的 URL，这个图像会在视频播放前显示。通常用于粗略的预览或者广告。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video#preload"><code>preload</code></a><br>这个属性被用来缓冲较大的文件，有 3 个值可选：</p>
+<ul>
+<li><code>&quot;none&quot;</code> ：不缓冲</li>
+<li><code>&quot;auto&quot;</code> ：页面加载后缓存媒体文件</li>
+<li><code>&quot;metadata&quot;</code> ：仅缓冲文件的元数据</li>
+</ul>
+</li>
+</ul>
+<h2 id="Iframe"><a href="#Iframe" class="headerlink" title="Iframe"></a>Iframe</h2><pre><code class="html">&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=19390801&amp;bvid=BV1bW411n7fY&amp;cid=31621681&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+</code></pre>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe#attr-allowfullscreen"><code>allowfullscreen</code></a><br>如果设置，<code>&lt;iframe&gt;</code>则可以通过<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fullscreen_API">全屏 API</a>  设置为全屏模式（稍微超出本文的范围）。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe#attr-frameborder"><code>frameborder</code></a><br>如果设置为 1，则会告诉浏览器在此框架和其他框架之间绘制边框，这是默认行为。0 删除边框。不推荐这样设置，因为在  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Glossary/CSS">CSS 中</a>可以更好地实现相同的效果。<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border"><code>border</code></a><code>: none;</code></p>
+</li>
+<li><p>[<code>src</code>](<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe#attr-src">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe#attr-src</a><br>该属性与  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a> &#x2F; 元素表示文档中的图像。<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a>一样包含指向要嵌入文档的 URL 路径。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe#attr-width"><code>width</code></a>  和  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe#attr-height"><code>height</code></a><br>这些属性指定你想要的 iframe 的宽度和高度。</p>
+</li>
+</ul>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe#attr-sandbox"><code>sandbox</code></a><br>该属性需要在已经支持其他  <code>&lt;iframe&gt;</code>  功能（例如 IE 10 及更高版本）但稍微更现代的浏览器上才能工作，该属性可以提高安全性设置；我们将在下一节中更加详细地谈到。</li>
+</ul>
+<blockquote>
+<p>始终使用  <code>sandbox</code>  属性来保证安全!</p>
+</blockquote>
+<h1 id="表格-td-x2F-tr"><a href="#表格-td-x2F-tr" class="headerlink" title="表格 td&#x2F;tr"></a><em>表格 td&#x2F;tr</em></h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web">web 入门 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
+<blockquote>
+<p>如果你有一些意见或建议, 欢迎评论! 你的意见对我很重要.<br>如果觉得有帮助的话, 麻烦点一点仓库的 star，感激不尽~</p>
+</blockquote>
+</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2023/07/262dd3560c6b.html" title="CSS 选择器"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: CSS 选择器</span></a><a class="button is-default" href="/2023/07/3a730b102c6e.html" title="Win桌面美化方案分享-1"><span class="has-text-weight-semibold">Next: Win桌面美化方案分享-1</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="ZlxmChen/ZLxmBlog.github.io" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com//"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/ZlxmChen"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com//"><i class="iconfont icon-ins"></i></a><!-- RSS--><a title="rss" target="_blank" rel="noopener nofollow" href="/atom.xml"><i class="iconfont icon-rss"></i></a><!-- 知乎--><a title="zhihu" target="_blank" rel="noopener nofollow" href="//zhihu.com/people/kkk-69-97-65"><i class="iconfont icon-zhihu"></i></a><!-- 领英--><!-- 脸书--></section><p><span>Copyright ©</span><span> ZlxmChen 2025</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>
